@@ -12,6 +12,7 @@ import Favourites from './pages/Favourites'
 import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import PackageDetail from './pages/PackageDetails'
 
 export default function App(){
   return (
@@ -29,6 +30,7 @@ export default function App(){
           <Route path='/contact' element={<Contact />} />
           <Route path='/favourites' element={<Favourites/>}/>
           <Route path='*' element={<NotFound />} />
+          <Route path="/package/:id" element={<PackageDetail />} />
         </Routes>
       </main>
       <Footer />

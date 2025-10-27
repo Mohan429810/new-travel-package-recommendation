@@ -13,7 +13,7 @@ export default function Login(){
       localStorage.setItem('voyage_user', JSON.stringify({name: found.name, email: found.email}))
       nav('/dashboard')
     } else {
-      alert('Invalid credentials (demo). You can register first.')
+      alert('Invalid credentials. You can register first.')
     }
   }
   return (

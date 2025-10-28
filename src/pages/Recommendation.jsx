@@ -31,8 +31,6 @@ export default function Recommendation() {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    // Filtering logic
     const res = trips.filter((t) => {
       if (
         form.destination &&
@@ -75,14 +73,12 @@ export default function Recommendation() {
       )
         return false;
 
-      // Amenities filter (assuming t.Amenities is an array like ['WiFi', 'Meals'])
       if (
         form.amenities.length > 0 &&
         !form.amenities.every((a) => (t.Amenities || []).includes(a))
       )
         return false;
 
-      // Rating filter (assuming t.Star_Rating exists)
       if (form.rating && Number(t.Star_Rating || 0) < Number(form.rating))
         return false;
 
@@ -92,20 +88,21 @@ export default function Recommendation() {
     setResults(res);
   }
 
-  const types = ['Any', ...Array.from(new Set(trips.map((t) => t.Destination_Type).filter(Boolean)))];
-  const seasons = ['Any', ...Array.from(new Set(trips.map((t) => t.Season).filter(Boolean)))];
-  const sources = ['Any', ...Array.from(new Set(trips.map((t) => t.Source).filter(Boolean)))];
+  const types = ['Destination-type', ...Array.from(new Set(trips.map((t) => t.Destination_Type).filter(Boolean)))];
+  const seasons = ['Season', ...Array.from(new Set(trips.map((t) => t.Season).filter(Boolean)))];
+  const sources = ['Pickup-point', ...Array.from(new Set(trips.map((t) => t.Source).filter(Boolean)))];
   const amenitiesList = ['WiFi', 'Meals', 'Transport', 'Guide', 'Activities'];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-8">
-      <h1 className="text-3xl font-bold mb-6">Get Personalized Recommendations</h1>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      <h1 className="text-3xl font-bold mb-6 text-center md:text-left">Get Personalized Recommendations</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6">
+      {/* Main responsive layout */}
+      <div className="flex flex-col md:flex-row gap-6">
         {/* ---------- LEFT SIDE (Sidebar Filters) ---------- */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 bg-primary-900/30 p-6 rounded-xl border border-primary-800 h-fit sticky top-6"
+          className="w-full md:w-[300px] flex-shrink-0 flex flex-col gap-4 bg-primary-900/30 p-6 rounded-xl border border-primary-800"
         >
           <h3 className="text-lg font-semibold mb-1">Basic Filters</h3>
           <input
@@ -185,7 +182,7 @@ export default function Recommendation() {
             onChange={(e) => setForm({ ...form, rating: e.target.value })}
             className="px-3 py-2 rounded-md bg-primary-900/40"
           >
-            <option value="">Any</option>
+            <option value="">Select Ratings</option>
             <option value="3">3★ & above</option>
             <option value="4">4★ & above</option>
             <option value="5">5★ only</option>
@@ -210,7 +207,7 @@ export default function Recommendation() {
         </form>
 
         {/* ---------- RIGHT SIDE (Recommended Packages) ---------- */}
-        <div>
+        <div className="flex-1">
           <h2 className="text-2xl font-semibold mb-4">
             Matches ({results.length})
           </h2>
@@ -221,7 +218,7 @@ export default function Recommendation() {
           )}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {results.map((r, idx) => (
-              <PackageCard key={idx} p={r}/>
+              <PackageCard key={idx} p={r} />
             ))}
           </div>
         </div>

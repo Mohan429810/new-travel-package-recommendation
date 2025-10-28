@@ -18,7 +18,7 @@ export default function Dashboard(){
   return (
     <div className='max-w-5xl mx-auto px-4 py-8'>
       <h1 className='text-3xl font-bold'>Welcome back, {user.name}</h1>
-      <p className='mt-3 text-slate-300'>This dashboard shows your saved recommendations (demo stored in localStorage).</p>
+      <p className='mt-3 text-slate-300'>This dashboard shows your saved recommendations.</p>
       <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4'>
         <div className='p-6 bg-primary-900/40 rounded-xl border border-primary-800'>
           <h3 className='font-semibold'>Saved Preferences</h3>

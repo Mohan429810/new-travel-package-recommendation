@@ -65,10 +65,6 @@ export default function PackageCard({ p }) {
               View
             </button>
 
-            <button className="px-3 py-2 rounded-md border border-primary-700 text-sm">
-              Book
-            </button>
-
             <button
               onClick={toggleFav}
               className={`px-3 py-2 rounded-md text-sm transition-all ${

@@ -210,7 +210,7 @@ export default function About() {
       {/* TEAM SECTION */}
       <section className="bg-slate-950 py-20 px-6">
         <h2 className="text-3xl font-bold text-center text-cyan-400 mb-12">Meet Our Team</h2>
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-10">
           {teamMembers.map((member, i) => (
             <motion.div
               key={i}
@@ -222,7 +222,7 @@ export default function About() {
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-2 border-cyan-400"
+                className="w-32 h-32 mx-auto rounded-full object-cover mb-3 border-2 border-cyan-400"
               />
               <h3 className="text-xl font-semibold text-white">{member.name}</h3>
               <p className="text-cyan-400 text-sm mb-2">{member.role}</p>

@@ -25,7 +25,7 @@ export default function App(){
           <Route path='/recommend' element={<Recommendation />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
+
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/favourites' element={<Favourites/>}/>

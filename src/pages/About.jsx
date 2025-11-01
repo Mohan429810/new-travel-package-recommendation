@@ -62,33 +62,33 @@ const features = [
 const teamMembers = [
   {
     name: "Tamma Varun Sai Venkat",
-    role: "Founder & CEO",
+    role: "Full-Stack Developer",
     img: team1,
-    bio: "Aarav built Voyage with a passion for travel and technology. He ensures the platform delivers innovative experiences for every traveler.",
+    bio: "Tamma Varun Sai Venkat, a passionate Full-Stack Developer, built Voyage by combining his love for travel and technology. He ensures the platform delivers seamless, innovative experiences for every traveler.",
   },
   {
-    name: "Mohan Tippa",
-    role: "Lead Travel Designer",
+    name: "Mohan",
+    role: "Full-Stack Developer",
     img: team2,
-    bio: "Mohan crafts unique travel itineraries and ensures every destination we feature offers authentic cultural experiences.",
+    bio: "Mohan a passionate Full-Stack Developer, built Voyage by combining his love for travel and technology. He ensures the platform delivers seamless, innovative experiences for every traveler.",
   },
   {
     name: "Vamsi Kumar",
-    role: "Frontend Developer",
+    role: "Data Scientist",
     img: team3,
-    bio: "Rohan ensures the Voyage interface is fast, intuitive, and visually stunning across all devices using React and Tailwind CSS.",
+    bio: "Vamsi Kumar,a passionate Data Scientist, built Voyage by combining his expertise in data analytics and his love for travel and technology. He ensures the platform delivers intelligent, data-driven, and innovative experiences for every traveler.",
   },
   {
     name: "Veresi Muneendra",
-    role: "Customer Experience Manager",
+    role: "Data Scientist",
     img: team4,
-    bio: "Diya brings a personal touch to every journey. She ensures every traveler feels valued, supported, and heard.",
+    bio: "Veresi Muneendra,a passionate Data Scientist, built Voyage by combining his expertise in data analytics and his love for travel and technology. He ensures the platform delivers intelligent, data-driven, and innovative experiences for every traveler.",
   },
   {
     name: "Rajitha.P",
-    role: "Customer Experience Manager",
+    role: "Data Scientist",
     img: team5,
-    bio: "Rajitha brings a personal touch to every journey. She ensures every traveler feels valued, supported, and heard.",
+    bio: "Rajitha, a passionate Data Scientist, built Voyage by combining her expertise in data analytics and her love for travel and technology. She ensures the platform delivers intelligent, data-driven, and innovative experiences for every traveler.",
   },
 ];
 

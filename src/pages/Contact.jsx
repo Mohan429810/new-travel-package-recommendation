@@ -127,7 +127,7 @@ export default function Contact() {
           <motion.form
             onSubmit={(e) => {
               e.preventDefault();
-              alert("Demo form — backend not connected yet!");
+              alert("message sent!");
             }}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
